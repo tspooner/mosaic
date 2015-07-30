@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/*==============================
+=            Vendor            =
+==============================*/
+
+@import "vendor/modular-scale";
+@import "vendor/normalize.css/normalize";
+
+/*-----  End of Vendor  ------*/
+
+/*===============================
+=         Matter Flex           =
+===============================*/
+
+@import "core/core";
+@import "core/flex";
+
+@import "elements/divider/main";
+@import "elements/divider/modifiers";
+
+/*-----  End of Matter  ------*/

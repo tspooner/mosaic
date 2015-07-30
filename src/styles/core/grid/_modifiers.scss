@@ -1,0 +1,73 @@
+.wrapper {
+	&.fluid {
+		max-width: none;
+
+		@include pad(0);
+	}
+
+	&.vpad {
+	    padding-top: 1rem;
+	    padding-bottom: 1rem;
+	}
+}
+
+.col {
+    @for $i from 1 through $grid-columns {
+        &.#{$grid-class-width}-xs-#{$i} { width: col-width($i); }
+        &.#{$grid-class-shift}-xs-#{$i} { @include shift($i); }
+        &.#{$grid-class-push}-xs-#{$i} { @include slide($i); }
+        &.#{$grid-class-pull}-xs-#{$i} { @include slide(-$i); }
+    }
+
+    @media #{$sm} {
+        @for $i from 1 through $grid-columns {
+            &.#{$grid-class-width}-#{$i} { width: col-width($i); }
+            &.#{$grid-class-shift}-#{$i} { @include shift($i); }
+            &.#{$grid-class-push}-#{$i} { @include slide($i); }
+            &.#{$grid-class-pull}-#{$i} { @include slide(-$i); }
+
+            &.#{$grid-class-width}-sm-#{$i} { width: col-width($i); }
+            &.#{$grid-class-shift}-sm-#{$i} { @include shift($i); }
+            &.#{$grid-class-push}-sm-#{$i} { @include slide($i); }
+            &.#{$grid-class-pull}-sm-#{$i} { @include slide(-$i); }
+        }
+    }
+
+    @media #{$md} {
+        @for $i from 1 through $grid-columns {
+            &.#{$grid-class-width}-md-#{$i} { width: col-width($i); }
+            &.#{$grid-class-shift}-md-#{$i} { @include shift($i); }
+            &.#{$grid-class-push}-md-#{$i} { @include slide($i); }
+            &.#{$grid-class-pull}-md-#{$i} { @include slide(-$i); }
+        }
+    }
+
+    @media #{$lg} {
+        @for $i from 1 through $grid-columns {
+            &.#{$grid-class-width}-lg-#{$i} { width: col-width($i); }
+            &.#{$grid-class-shift}-lg-#{$i} { @include shift($i); }
+            &.#{$grid-class-push}-lg-#{$i} { @include slide($i); }
+            &.#{$grid-class-pull}-lg-#{$i} { @include slide(-$i); }
+        }
+    }
+}
+
+// Extras
+.padded { @include pad; }
+.padded-sm { @media #{$sm} { @include pad; } }
+.padded-md { @media #{$md} { @include pad; } }
+.padded-lg { @media #{$lg} { @include pad; } }
+
+.hidden-xs { @media #{$xs} { display: none; } }
+.hidden-sm { @media #{$laptop} { display: none; } }
+.hidden-md { @media #{$desktop} { display: none; } }
+.hidden-lg { @media #{$desktop-lg} { display: none; } }
+
+.visible-xs { display: none; }
+@media #{$xs} { .visible-xs { display: block !important; } }
+.visible-sm { display: none; }
+@media #{$laptop} { .visible-sm { display: block !important; } }
+.visible-md { display: none; }
+@media #{$desktop} { .visible-md { display: block !important; } }
+.visible-lg { display: none; }
+@media #{$desktop-lg} { .visible-lg { display: block !important; } }

@@ -1,0 +1,9 @@
+.leader {
+    border-bottom: solid 1px $cl-gray-light;
+
+    padding-bottom: 1rem;
+    margin:         1.5rem 0 1.5rem 0;
+
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+}

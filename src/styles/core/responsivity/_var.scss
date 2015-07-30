@@ -1,0 +1,15 @@
+$mobile-width:  480px  !default;
+$tablet-width:  768px  !default;
+$laptop-width:  1024px !default;
+$desktop-width: 1280px !default;
+
+$xs: mq(max-width $tablet-width -1px);
+$sm: mq(min-width $tablet-width);
+$md: mq(min-width $laptop-width);
+$lg: mq(min-width $desktop-width);
+
+$mobile:     mq(max-width $mobile-width);
+$tablet:     mq(min-width $mobile-width + 1px, max-width $tablet-width);
+$laptop:     mq(min-width $tablet-width + 1px, max-width $laptop-width);
+$desktop:    mq(min-width $laptop-width + 1px, max-width $desktop-width);
+$desktop-lg: mq(min-width $desktop-width + 1px);

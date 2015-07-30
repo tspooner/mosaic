@@ -1,0 +1,29 @@
+{
+    "name": "Mosaic",
+    "version": "0.0.0",
+    "description": "An simple front-end css framework designed for the modern web.",
+
+    "author": "Tom Spooner <spooner10000@gmail.com>",
+
+    "license": "MIT",
+
+    "private": true,
+
+    "devDependencies": {
+        "autoprefixer-core": "*",
+        "bower": "*",
+        "del": "*",
+        "gulp": "*",
+        "gulp-concat": "*",
+        "gulp-header": "*",
+        "gulp-jshint": "*",
+        "gulp-minify-css": "*",
+        "gulp-notify": "*",
+        "gulp-postcss": "*",
+        "gulp-rename": "*",
+        "gulp-sass": "*",
+        "gulp-sourcemaps": "*",
+        "gulp-uglify": "*",
+        "gulp-util": "*"
+    }
+}

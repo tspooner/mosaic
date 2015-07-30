@@ -1,0 +1,47 @@
+.message { @extend %radius;
+    position: relative;
+
+    background-color: $cl-gray-lighter;
+    border:           solid 1px $cl-gray-light;
+
+    margin-bottom: 1rem;
+    padding:       0.5rem 1rem;
+
+    transition: opacity 0.15s ease-in-out;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 500;
+
+        margin-top: 0.1rem;
+    }
+
+    p { margin-bottom: 0; }
+}
+
+.message.icon {
+    padding-left: 35px;
+
+    &::before {
+        font-size:   1rem;
+        font-family: FontAwesome;
+
+        top:      0.4rem;
+        left:     0.8rem;
+        position: absolute;
+    }
+}
+
+.message .dismiss {
+    line-height: 0;
+    font-size:   1.2rem;
+    color:       rgba($base-font-color, 0.75);
+    font-family: $font-family-sans-serif !important;
+
+    padding: 0.2rem 0.8rem;
+
+    right: 0;
+    top:   0.9rem;
+    position: absolute;
+
+    &:hover { color: $base-font-color; }
+}

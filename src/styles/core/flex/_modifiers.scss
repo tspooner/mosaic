@@ -1,0 +1,24 @@
+.col {
+    @for $i from 1 through $grid-columns {
+        &.#{$grid-class-width}-xs-#{$i} { @include span($i); }
+    }
+
+    @media #{$sm} {
+        @for $i from 1 through $grid-columns {
+            &.#{$grid-class-width}-#{$i} { @include span($i); }
+            &.#{$grid-class-width}-sm-#{$i} { @include span($i); }
+        }
+    }
+
+    @media #{$md} {
+        @for $i from 1 through $grid-columns {
+            &.#{$grid-class-width}-md-#{$i} { @include span($i); }
+        }
+    }
+
+    @media #{$lg} {
+        @for $i from 1 through $grid-columns {
+            &.#{$grid-class-width}-lg-#{$i} { @include span($i); }
+        }
+    }
+}

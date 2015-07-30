@@ -1,0 +1,16 @@
+// Base
+$nav-margin-bottom: 1rem !default;
+
+// Heights
+$nav-min-height          : 45px !default;
+$nav-collapse-item-height: 40px !default;
+
+// Colours
+$nav-bg-color      : #ffffff !default;
+$nav-border-color  : $cl-gray-light !default;
+
+$nav-link-color    : $cl-gray-darker !default;
+$nav-link-bg-hover : $cl-gray-lighter !default;
+$nav-link-bg-active: $cl-gray-light !default;
+
+$nav-toggle-color-hover: $link-font-color !default;

@@ -1,0 +1,26 @@
+.progress { @extend %radius;
+    position: relative;
+    margin: 0 0 1rem;
+
+    width:  100%;
+    height: 1rem;
+
+    color:            #ffffff;
+    background-color: $cl-gray-light;
+
+    line-height: 1rem;
+    font-weight: bold;
+    text-align:  center;
+    @include font-size($ms-sm);
+
+    .bar { @extend %radius;
+        float: left;
+
+        width:  80%;
+        height: 1rem;
+
+        background-color: $cl-default;
+
+        transition: width 0.5s ease;
+    }
+}

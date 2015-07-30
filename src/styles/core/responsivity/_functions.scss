@@ -1,0 +1,9 @@
+@function mq($rules...) {
+    $query: screen;
+
+    @each $rule in $rules {
+        $query: $query + ' and (' +  nth($rule, 1) + ': ' + nth($rule, 2) + ')';
+    }
+
+    @return $query;
+}

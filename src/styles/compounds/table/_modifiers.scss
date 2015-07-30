@@ -1,0 +1,47 @@
+.table {
+    &.collapse { width: auto; }
+    &.equal { td, th { width: 1%; } }
+
+    &.compact {
+        border-spacing: 0px;
+
+        td, th { padding: 0.15rem 0.3rem; }
+    }
+
+    &.simple {
+        border:          none;
+        border-collapse: collapse;
+
+        thead, tfoot { background: none; }
+    }
+
+    &.striped {
+        tbody {
+            tr:nth-of-type(even) { background-color: $cl-gray-lighter; }
+
+            th, td { border-top: none; }
+        }
+    }
+}
+
+.table {
+    tr, th, td {
+        &.active { background-color: $cl-gray-light; }
+        &.disabled { color: $cl-gray-light; }
+
+        &.error { @include table-colorify($cl-error); }
+        &.warning { @include table-colorify($cl-warning); }
+        &.success { @include table-colorify($cl-success); }
+        &.info { @include table-colorify($cl-info); }
+    }
+}
+
+.responsive > .table {
+    @media #{$xs} {
+        border: none;
+
+        margin-bottom: 0;
+
+        th { white-space: nowrap; }
+    }
+}

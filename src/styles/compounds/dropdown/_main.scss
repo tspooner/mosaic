@@ -1,0 +1,43 @@
+.dropdown { @extend %radius;
+    background-color: #ffffff;
+    border:           solid 1px $cl-gray-light;
+
+    list-style: none;
+
+    margin:    0;
+    float:     left;
+    min-width: 8rem;
+    padding:   0.4rem 0;
+
+    top:      100%;
+    z-index:  1001;
+    position: absolute;
+
+    display: none;
+}
+
+.dropdown > li {
+    > a {
+        color: $base-font-color;
+
+        width:   100%;
+        float:   none;
+        display: block;
+        padding: 0.4rem 0.8rem;
+
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover { background-color: $cl-gray-lighter; }
+    }
+
+    &.active > a { background-color: $cl-gray-light; }
+
+    &.disabled > a {
+        background-color: #ffffff;
+        color:            $cl-gray-light;
+
+        cursor: not-allowed;
+    }
+}
+
+.dropdown hr { margin: 0.4rem 0; }

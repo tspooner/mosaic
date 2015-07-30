@@ -1,0 +1,24 @@
+.responsive { @extend %radius;
+    width:         100%;
+    margin-bottom: 1rem;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    @media #{$xs} {
+        border: solid 1px $cl-gray-light;
+
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+
+            width:  14px;
+            height: 13px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius:    8px;
+            border:           solid 3px #ffffff;
+            background-color: rgba(0, 0, 0, .5);
+        }
+    }
+}

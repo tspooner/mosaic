@@ -1,0 +1,15 @@
+img {
+	&.rounded { @extend %radius; }
+	&.circle {  @extend %radius-circle; }
+
+	&.thumbnail {
+        cursor: pointer;
+		border: solid 1px $cl-gray-light;
+
+        padding: 4px;
+
+		transition: border-color 0.2s ease-in-out;
+
+		&:hover { border-color: $cl-primary; }
+	}
+}

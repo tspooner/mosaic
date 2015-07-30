@@ -1,0 +1,3 @@
+@function col-width($cols: 1, $total: $grid-columns) {
+    @return 100% * ($cols / $total);
+}

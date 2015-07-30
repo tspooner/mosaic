@@ -1,0 +1,14 @@
+.label {
+    &.sharp { @extend %radius-none; }
+    &.round { @extend %radius-round; }
+
+    &.small { font-size: 1rem; }
+
+    &.primary { background-color: $cl-primary; }
+    &.dark {    background-color: $cl-gray-darker; }
+
+    &.error {   background-color: $cl-error; }
+    &.warning { background-color: $cl-warning; }
+    &.success { background-color: $cl-success; }
+    &.info {    background-color: $cl-info; }
+}

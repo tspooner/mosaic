@@ -1,0 +1,5 @@
+@mixin message-colorify($cl: $cl-primary) {
+    border-color:     $cl;
+    color:            darken($cl, 35);
+    background-color: lighten($cl, 15);
+}

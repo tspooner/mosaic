@@ -1,0 +1,40 @@
+.sans-serif { font-family: $font-family-sans-serif; }
+.serif { font-family: $font-family-serif; }
+.monospace { font-family: Menlo, $font-family-monospace; }
+
+ul, ol {
+	&.inline {
+		margin-left: -5px;
+	    padding-left: 0;
+
+	    > li {
+	        display: inline-block;
+	        padding: 0 5px;
+	    }
+	}
+
+    &.unstyled {
+        padding-left: 0px;
+    	list-style: none;
+
+	    ul, ol {
+	        list-style: none;
+	        padding-left: 30px;
+	    }
+    }
+
+    &.disc { list-style: disc; }
+    &.circle { list-style: circle; }
+    &.square { list-style: square; }
+}
+
+blockquote.right {
+	border-left: none;
+	border-right: solid 5px $cl-gray-light;
+	text-align: right;
+
+	footer {
+		&:before { content: ""; }
+		&:after { content: "\0020 \2014"; }
+	}
+}

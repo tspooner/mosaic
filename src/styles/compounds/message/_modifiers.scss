@@ -1,0 +1,15 @@
+.message {
+    &.borderless { border-width: 0; }
+
+    &.error {   @include message-colorify($cl-error); }
+    &.warning { @include message-colorify($cl-warning); }
+    &.success { @include message-colorify($cl-success); }
+    &.info {    @include message-colorify($cl-info); }
+}
+
+.message.icon {
+    &.success::before { content: "\f058"; }
+    &.info::before {    content: "\f05a"; }
+    &.warning::before { content: "\f06a"; }
+    &.error::before {   content: "\f05e"; }
+}

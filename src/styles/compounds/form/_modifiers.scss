@@ -1,0 +1,14 @@
+@media #{$sm} {
+	form.inline .control {
+		display: inline-block !important;
+
+        width: auto !important;
+	}
+}
+
+fieldset, label {
+	&.error {   color: $cl-error; }
+	&.warning { color: $cl-warning; }
+	&.success { color: $cl-success; }
+	&.info {    color: $cl-info; }
+}

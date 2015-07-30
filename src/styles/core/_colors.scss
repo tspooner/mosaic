@@ -1,0 +1,27 @@
+// Grays
+$cl-gray        : #a0a0a0;
+
+$cl-gray-light  : lighten($cl-gray, 27.5);
+$cl-gray-lighter: lighten($cl-gray-light, 7.5);
+
+$cl-gray-dark   : darken($cl-gray, 30);
+$cl-gray-darker : darken($cl-gray-dark, 10);
+
+// Base
+$cl-bg     : #ffffff !default;
+$cl-brand  : #ffdd00 !default;
+
+$cl-default: $cl-gray !default;
+$cl-primary: #3c7998 !default;
+
+// Context
+$cl-success: #8bcc98 !default;
+$cl-info   : #8bc4cc !default;
+$cl-warning: #cccc8b !default;
+$cl-error  : #cc928b !default;
+
+// Complementary context
+$cl-success-complement: complement($cl-success);
+$cl-info-complement   : complement($cl-info);
+$cl-warning-complement: complement($cl-warning);
+$cl-error-complement  : complement($cl-error);

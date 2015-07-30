@@ -1,0 +1,5 @@
+@function font-size($size) {
+    $size: if(unitless($size), $size, strip-units($size));
+
+    @return ($size / strip-units($base-font-size)) + rem;
+}

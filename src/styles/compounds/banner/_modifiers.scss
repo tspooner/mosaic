@@ -1,0 +1,17 @@
+.banner {
+    &.gray {
+        background-color: $cl-gray-light;
+    }
+
+    &.dark {
+        color:            $cl-gray-lighter;
+        background-color: $cl-gray-darker;
+    }
+
+    &.rounded { @extend %radius; }
+
+    &.small {   padding: 1rem 0; }
+    &.smaller { padding: 0.5rem 0; }
+
+    &.footer {  padding: 1rem 0 2rem 0; }
+}

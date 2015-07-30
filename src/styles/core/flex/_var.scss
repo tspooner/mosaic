@@ -1,0 +1,14 @@
+// Grid Classes
+$grid-class-width:  "spans" !default;
+$grid-class-shift:  "shift" !default;
+$grid-class-push:   "push" !default;
+$grid-class-pull:   "pull" !default;
+
+$grid-columns:      12 !default;
+$gutter-width:      2% !default;
+
+$col-padding:       1rem !default;
+
+$wrap-sm-max-width: 768px !default;
+$wrap-md-max-width: 960px !default;
+$wrap-lg-max-width: 1140px !default;

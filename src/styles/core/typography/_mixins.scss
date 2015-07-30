@@ -1,0 +1,17 @@
+// Font size mixin adds px and % font-size, if possible,
+// for additional browser support.
+@mixin font-size($size) {
+    font-size: $size;
+
+    @if type-of($size) != string and unit($size) != px and unit($size) != '%' {
+        font-size: font-size($size);
+    }
+}
+
+@mixin improve-legibility {
+    text-rendering: optimizeLegibility;
+    text-shadow: 0 0 1px transparent;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}

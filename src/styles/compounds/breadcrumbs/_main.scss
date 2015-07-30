@@ -1,0 +1,26 @@
+.breadcrumbs { @extend ul.inline; @extend %radius;
+    background-color: $cl-gray-lighter;
+    border:           solid 1px $cl-gray-light;
+
+    margin-left: 0;
+    padding:     0.4rem 0.8rem;
+
+    li { padding: 0; }
+
+    li:not(:first-child)::before {
+        padding: 0 5px;
+        content: "/\00a0";
+
+        color: $cl-gray;
+    }
+
+    li.active, li.active a {
+        cursor: default;
+        color:  $base-font-color;
+    }
+
+    li.disabled, li.disabled a {
+        cursor: default;
+        color:  $cl-gray;
+    }
+}

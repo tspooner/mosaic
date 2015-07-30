@@ -1,0 +1,46 @@
+// Font Families
+$font-family-sans-serif: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Consolas, "Courier New", monospace, monospace !default;
+
+// Base styles
+$base-font-size:   0.875rem !default;
+$base-line-height: 1.6 !default;
+$base-font-family: $font-family-sans-serif !default;
+$base-font-weight: 400 !default;
+$base-font-color:  lighten($cl-gray-darker, 5) !default;
+
+// Paragraph styles
+$paragraph-margin-top:    0 !default;
+$paragraph-margin-bottom: $base-font-size !default;
+
+// Heading styles
+$heading-font-family: inherit !default;
+$heading-font-weight: 400 !default;
+$heading-line-height: 1.0 !default;
+$heading-font-color:  inherit !default;
+
+$heading-margin-top:    $base-font-size * $heading-line-height !default;
+$heading-margin-bottom: $heading-margin-top / $golden !default;
+
+// Heading <small> styles
+$small-font-size:          100% / $golden !default;
+$small-heading-font-color: $cl-gray !default;
+
+// Link styles
+$link-font-color:       $cl-primary !default;
+$link-font-color-hover: lighten($link-font-color, 10) !default;
+
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale
+$ms-base:  $base-font-size $base-line-height;
+$ms-ratio: $golden;
+
+$ms-xxxlg:  font-size(ms(5));
+$ms-xxlg:   font-size(ms(4));
+$ms-xlg:    font-size(ms(3));
+$ms-lg:     font-size(ms(2));
+$ms-md:     font-size(ms(1));
+$ms-normal: font-size($base-font-size);
+$ms-sm:     font-size(ms(-1));
+$ms-xsm:    font-size(ms(-2));

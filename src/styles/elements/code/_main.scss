@@ -1,0 +1,48 @@
+%code { @extend %radius;
+    font-size:   90%;
+    font-weight: bold;
+    font-family: $font-family-monospace;
+
+    padding: 1px 4px;
+
+    word-break: break-all;
+    word-wrap:  break-word;
+}
+
+code { @extend %code;
+    background-color: $cl-gray-lighter;
+    border:           solid 1px $cl-gray-light;
+
+    white-space: nowrap;
+}
+
+kbd { @extend %code;
+    color:            #ffffff;
+    background-color: #000000;
+}
+
+pre { @extend code;
+    font-weight: 400;
+    font-family: Menlo, $font-family-monospace;
+
+    margin-top: 0;
+    padding:    0.5rem 1rem;
+
+    width: 100%;
+
+    white-space: pre;
+
+    > code {
+        border:           none;
+        background-color: transparent;
+
+        font-size:   inherit;
+        font-weight: inherit;
+        font-family: inherit;
+
+        margin:  0;
+        padding: 0;
+
+        white-space: pre;
+    }
+}

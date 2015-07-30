@@ -1,0 +1,12 @@
+// Clearfix
+.clear, .clearfix { @extend %clearfix; }
+
+// Float
+.to-left { float: left !important; }
+.to-right { float: right !important; }
+
+// Text
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }

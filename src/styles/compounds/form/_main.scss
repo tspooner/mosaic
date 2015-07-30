@@ -1,0 +1,42 @@
+form { @extend %clearfix;
+    margin-bottom: 1rem;
+
+    label {
+        font-weight: 400;
+
+        display: block;
+
+        & + .control, & > .control { margin-top: 2px; }
+    }
+
+    .help {
+        font-size:   75%;
+        font-weight: 400;
+        color:       $cl-gray;
+
+        margin-top: -1em;
+
+        &.required {
+            font-size: 100%;
+            color:     $cl-error;
+        }
+    }
+
+    label .help {      display: inline; }
+    .control + .help { display: block; margin-bottom: 1rem; }
+
+    fieldset { @extend %radius;
+        border-color: $cl-gray-light;
+
+        margin:        0px;
+        margin-bottom: 1rem;
+        padding:       0.5rem 1rem;
+
+        legend {
+            font-weight: bold;
+
+            margin-left: -0.5rem;
+            padding:      0 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+$button-color:    #ffffff;
+$button-bg-color: lighten($cl-default, 10);
+
+$button-color-disabled:    darken($cl-gray-light, 15);
+$button-bg-color-disabled: $cl-gray-light;

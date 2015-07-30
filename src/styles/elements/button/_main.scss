@@ -1,0 +1,26 @@
+.button { @extend %radius;
+    border:  none;
+    outline: 0;
+
+    display: inline-block;
+    padding: 6px 12px;
+
+    text-align:      center;
+    color:           $button-color;
+
+    white-space:             nowrap;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing:  antialiased;
+
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+    @include button-colorify;
+
+    &:hover, &:active, &.active { color: #ffffff; }
+
+    &.disabled, &:disabled {
+        cursor:           not-allowed;
+        color:            $button-color-disabled !important;
+        background-color: $button-bg-color-disabled !important;
+    }
+}

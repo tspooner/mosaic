@@ -1,0 +1,35 @@
+.control {
+    &.sharp { @extend %radius-none; }
+    &.round { @extend %radius-round;
+        padding: 8px 12px !important;
+    }
+
+    &.small { @include input-size(80%, 24px); }
+    &.large { @include input-size(130%, 44px); }
+
+    &.error {   @include input-colorify($cl-error); }
+    &.warning { @include input-colorify($cl-warning); }
+    &.success { @include input-colorify($cl-success); }
+    &.info {    @include input-colorify($cl-info); }
+}
+
+.group {
+    .styled { @extend %radius;
+        padding: 0 10px;
+
+        background-color: $cl-gray-light;
+        border:           solid 1px $input-border-color;
+
+        cursor: default;
+    }
+
+    > :first-child .button {
+        border-top-right-radius:    0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    > :last-child .button {
+        border-top-left-radius:    0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}

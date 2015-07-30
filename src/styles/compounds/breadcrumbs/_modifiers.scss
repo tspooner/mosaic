@@ -1,0 +1,17 @@
+.breadcrumbs {
+    &.clear {
+        border:           none;
+        background-color: transparent;
+    }
+
+    &.dark {
+        background-color: $cl-gray-darker;
+        color:            $cl-gray-lighter;
+
+        a {       color: $cl-gray; }
+        a:hover { color: $cl-gray-lighter; }
+
+        li.disabled, li.disabled a { color: $cl-gray-dark; }
+        li.active, li.active a {     color: $cl-gray-lighter; }
+    }
+}

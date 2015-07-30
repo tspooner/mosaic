@@ -1,0 +1,173 @@
+// Menu
+.menu { @extend %radius;
+	background-color: $nav-bg-color;
+    border:           solid 1px $nav-border-color;
+
+    min-height:    $nav-min-height;
+    margin-bottom: $nav-margin-bottom;
+
+    z-index:  100;
+    position: relative;
+}
+
+.menu .wrapper { @include pad(0 default); }
+
+// Navigation
+.menu .nav {
+    display: block;
+
+    > ul {
+        list-style: none;
+
+        margin:  0;
+        padding: 0;
+
+        &.left {  float: left; }
+        &.right { float: right; margin-right: -1rem; }
+
+        > li {
+            float:   left;
+            display: inline-block;
+
+            min-height: $nav-min-height;
+        }
+    }
+}
+
+// Collapsable Navigation
+.menu .nav.collapse {
+    display: block;
+
+    transition: height 0.4s ease;
+
+    @media #{$sm} { height: auto !important; }
+
+    @media #{$xs} {
+        clear: both;
+
+        margin-left:  -1rem;
+        margin-right: -1rem;
+
+        max-height: 280px;
+
+        height:     0px;
+        overflow-y: auto;
+
+        &:after { content: " "; display: table; clear: both; }
+
+        > ul {
+            margin-right: 0 !important;
+
+            width: 100%;
+
+            > li {
+                float:   none;
+                display: block;
+
+                min-height: $nav-collapse-item-height;
+
+                > a, > p {
+                    line-height: $nav-collapse-item-height;
+
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Collapsable Navigation Dropdown
+//      Always open unless stated with .hidden-xs
+.menu .nav.collapse .dropdown { @media #{$xs} {
+    clear: both;
+
+    border-radius:      0;
+    border-left-width:  0;
+    border-right-width: 0;
+    background-color:   $cl-gray-lighter;
+
+    padding:  0;
+    float:    none;
+    display:  block;
+    position: static;
+
+    a {
+        line-height: 40px;
+
+        padding: 0 2rem;
+
+        &:hover { background-color: darken($cl-gray-lighter, 2); }
+
+        &:first-child, &:last-child { line-height: 39px; }
+    }
+} }
+
+// Title and Toggle
+.menu {
+    .title, .toggle {
+        background: none;
+
+        opacity: 0.8;
+        filter:  alpha(opacity=80);
+
+        cursor: pointer;
+
+        @include font-size($ms-md);
+
+        &:hover {
+            opacity: 1;
+            filter:  alpha(opacity=100);
+        }
+    }
+
+    .title { margin-left: -1rem; }
+
+    .toggle {
+        margin-right: -1rem;
+        float:        right !important;
+
+        @media #{$sm} { display: none !important; }
+
+        &:hover { color: $link-font-color; }
+    }
+}
+
+// Menu Items
+.menu {
+	// All Items
+	.title, .toggle, .nav > ul > li > a, .nav > ul > li > p {
+		color:       $nav-link-color;
+        line-height: $nav-min-height;
+
+        margin-bottom: 0;
+        float:         left;
+        display:       block;
+
+        transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out, border-bottom 0.2s ease-in-out, color 0.2s ease-in-out;
+
+        @include pad(0 default);
+	}
+
+    // Fix menu if there are no controls
+    .nav:first-child > ul:not(.right) > li:first-child {
+        margin-left: -1rem;
+    }
+
+	// Link Items
+	.nav > ul > li {
+		> a:hover {    background-color: $nav-link-bg-hover; }
+		&.active > a { background-color: $nav-link-bg-active; }
+	}
+
+    // Dropdown Items
+    .nav > ul > li {
+        .dropdown {
+            border-top-left-radius:  0;
+            border-top-right-radius: 0;
+        }
+
+        &:hover .dropdown:not(.js) {
+            @media #{$sm} { display: block; }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@mixin button-size($padding, $font) { padding: $padding; font-size: $font; }
+
+@mixin button-colorify($cl: $button-bg-color) {
+    border-color:      $cl;
+    background-color:  $cl;
+
+    &.outline { color: $cl; }
+
+    &:hover {
+        border-color:      lighten($cl, 4);
+        background-color:  lighten($cl, 4);
+
+        &.outline { color: lighten($cl, 4); }
+
+        &.outline.fill {
+            border-color:     $cl;
+            background-color: $cl !important;
+        }
+    }
+
+    &:active, &.active {
+        border-color:      darken($cl, 4);
+        background-color:  darken($cl, 4);
+
+        &.outline { color: darken($cl, 4); }
+
+        &.outline.fill {
+            border-color:     $cl;
+            background-color: $cl !important;
+        }
+    }
+}

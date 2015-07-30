@@ -1,0 +1,4 @@
+@mixin table-colorify($cl) {
+    color:            darken($cl, 30);
+    background-color: lighten($cl, 20);
+}

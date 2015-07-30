@@ -1,0 +1,38 @@
+.button {
+    &.block {
+        width:   100%;
+        display: block;
+
+        & + & { margin-top: 5px; }
+    }
+
+    &.right { float: right; }
+
+    &.sharp { @extend %radius-none; }
+    &.round { @extend %radius-round; }
+
+    &.small { @include button-size(4px 8px, 75%); }
+    &.large { @include button-size(8px 20px, 125%); }
+
+    &.outline {
+        border:           solid 2px;
+        background-color: transparent !important;
+
+        padding: 4px 10px;
+
+        &.fill {
+            &:hover, &.active, &:active { color: #ffffff !important; }
+        }
+    }
+
+    // Colours
+    &.primary { @include button-colorify($cl-primary); }
+    &.dark {    @include button-colorify(#111111); }
+    &.light {   @include button-colorify(#eeeeee); }
+    &.light.outline.fill:hover { color: lighten($cl-gray-darker, 5) !important; }
+
+    &.success, &.green {  @include button-colorify($cl-success); }
+    &.info, &.blue {      @include button-colorify($cl-info); }
+    &.warning, &.yellow { @include button-colorify($cl-warning); }
+    &.error, &.red {      @include button-colorify($cl-error); }
+}

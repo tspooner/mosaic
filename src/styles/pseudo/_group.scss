@@ -1,0 +1,23 @@
+.group {
+	margin-bottom: 1rem;
+    display:       table;
+    position:      relative;
+
+    vertical-align: middle;
+
+    .affix {
+        width:   1%;
+        display: table-cell;
+
+        vertical-align: middle;
+    }
+
+    > * { margin-bottom: 0 !important; }
+
+    > :not(:last-child) { border-right-width: 0 !important; }
+
+    > :first-child { border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+    > :last-child {  border-top-left-radius: 0 !important;  border-bottom-left-radius: 0 !important; }
+
+    > :not(:first-child):not(:last-child) { @extend %radius-none; }
+}

@@ -1,0 +1,8 @@
+%radius, %radius-none, %radius-circle {
+    background-clip: padding-box;
+}
+
+%radius-none { border-radius: 0 !important; }
+%radius { border-radius: 0.25rem; }
+%radius-round { border-radius: 1rem !important; }
+%radius-circle { border-radius: 50%; }

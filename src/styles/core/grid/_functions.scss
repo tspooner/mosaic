@@ -1,0 +1,5 @@
+@function col-width($cols: 1, $total: $grid-columns) {
+    $one: (100% - (($total - 1) * $gutter-width)) / $total;
+
+    @return ($cols * $one) + (($cols - 1) * $gutter-width);
+}

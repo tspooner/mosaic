@@ -1,0 +1,13 @@
+@mixin input-colorify($cl, $text: true, $ext: "!important") {
+	border: solid 1px $cl #{$ext};
+
+    @if $text { color: $cl; }
+
+	&:focus { border-color: darken($cl, 15) #{$ext}; }
+}
+
+@mixin input-size($font, $height) {
+    height: $height !important;
+
+    @include font-size($font);
+}

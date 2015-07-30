@@ -1,0 +1,50 @@
+@mixin span($span: $cols of $total) {
+    $cols:  nth($span, 1);
+    $total: if(length($span) > 2, nth($span, 3), $grid-columns);
+
+    flex-basis: col-width($cols, $total);
+    max-width: col-width($cols, $total);
+}
+
+@mixin shift($span: $cols of $total) {
+    $cols:  nth($span, 1);
+    $total: if(length($span) > 2, nth($span, 3), $grid-columns);
+
+    margin-left: col-width($cols, $total) + $gutter-width !important;
+}
+
+@mixin slide($span: $cols of $total) {
+    $cols:      nth($span, 1);
+    $total: if(length($span) > 2, nth($span, 3), $grid-columns);
+
+    @if str-index(#{$cols}, '-') == null {
+        left: col-width($cols, $total) + $gutter-width;
+    } @else {
+        right: col-width(-$cols, $total) + $gutter-width;
+    }
+}
+
+@mixin pad($pad: $col-padding) {
+    $pad-final: null;
+
+    @each $val in $pad {
+        $val: if($val == 'default', $col-padding, $val);
+        $pad-final: join($pad-final, $val);
+    }
+
+    padding: $pad-final;
+}
+
+@mixin alpha($target: this, $offset: 0) {
+    @if $target == this {
+        margin-left: 0 !important;
+    } @else {
+        &:nth-child(#{$target}+#{$offset}) { margin-left: 0 !important; }
+        &:nth-child(#{$target}+#{$offset+1}) { clear: right; }
+    }
+}
+
+@mixin omega {
+    float: right !important;
+    margin-right: 0;
+}

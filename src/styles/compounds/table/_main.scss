@@ -1,0 +1,33 @@
+table {
+    background-color: transparent;
+
+    max-width: 100%;
+}
+
+.table { @extend %radius;
+    border-spacing:  2px;
+    border-collapse: separate;
+    border:          solid 1px $cl-gray-light;
+
+    text-align: left;
+
+    width:         100%;
+    margin-bottom: 1rem;
+
+    thead, tfoot {
+        background-color: $cl-gray-lighter;
+
+        font-weight: bold;
+    }
+
+    thead tr th, thead tr td { border-bottom: solid 2px $cl-gray-light; }
+    tfoot tr th, tfoot tr td { border-top:    solid 2px $cl-gray-light; }
+
+    tbody tr {
+        th, td { border-top: solid 1px $cl-gray-light; }
+
+        &:first-of-type th, &:first-of-type td { border-top: none; }
+    }
+
+    th, td { padding: 0.4rem 0.6rem; }
+}

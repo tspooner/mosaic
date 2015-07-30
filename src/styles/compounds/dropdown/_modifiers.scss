@@ -1,0 +1,13 @@
+.dropdown {
+    &.open { display: block; }
+
+	&.sharp { @extend %radius-none; }
+}
+
+.dropdown > li {
+	&.header {
+		color: $cl-gray;
+
+		padding: 0.2rem 0.8rem 0.1rem 0.8rem;
+	}
+}
