@@ -6,6 +6,9 @@ build
 node_modules
 tmp
 
+# Design files
+design
+
 # workspace files are user-specific
 *.sublime-workspace
 
