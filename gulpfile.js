@@ -12,7 +12,7 @@ var gulp =   require('gulp'),
 
 // Lets get the sass specific modules
 var sass =    require('gulp-sass'),
-    prefix =  require('autoprefixer-core'),
+    prefix =  require('autoprefixer'),
     postcss = require('gulp-postcss'),
     cssmin =  require('gulp-minify-css');
 
